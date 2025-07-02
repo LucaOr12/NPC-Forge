@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap");
+
+:root {
+  --font-family: "Kanit", sans-serif;
+
+  /* Light theme colors */
+  --color-bg-light: #f9fafb;
+  --color-surface-light: #ffffff;
+  --color-text-light: #111827;
+  --color-primary-light: #f97316;
+  --color-accent-light: #fb923c;
+  --color-border-light: #e5e7eb;
+  --color-shadow-light: rgba(0, 0, 0, 0.05);
+
+  /* Dark theme colors */
+  --color-bg-dark: #111827;
+  --color-surface-dark: #1f2937;
+  --color-text-dark: #f3f4f6;
+  --color-primary-dark: #fb923c;
+  --color-accent-dark: #f97316;
+  --color-border-dark: #374151;
+  --color-shadow-dark: rgba(0, 0, 0, 0.5);
+}
+
+.theme-light {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+
+  --color-bg: var(--color-bg-light);
+  --color-surface: var(--color-surface-light);
+  --color-text: var(--color-text-light);
+  --color-primary: var(--color-primary-light);
+  --color-accent: var(--color-accent-light);
+  --color-border: var(--color-border-light);
+  --color-shadow: var(--color-shadow-light);
+}
+
+.theme-dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+
+  --color-bg: var(--color-bg-dark);
+  --color-surface: var(--color-surface-dark);
+  --color-text: var(--color-text-dark);
+  --color-primary: var(--color-primary-dark);
+  --color-accent: var(--color-accent-dark);
+  --color-border: var(--color-border-dark);
+  --color-shadow: var(--color-shadow-dark);
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  background-color: var(--color-bg);
+  font-family: var(--font-family);
+}
+
+.container {
+  height: 93vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* NPC Card with fade-in */
+.npc-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  max-width: 730px;
+  width: 100%;
+  box-shadow: 0 12px 24px var(--color-shadow);
+  text-align: left;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.npc-card:hover {
+  box-shadow: 0 20px 40px var(--color-shadow);
+  transform: scale(1.02);
+}
+
+.npc-card h2 {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.npc-card p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.npc-card em {
+  color: var(--color-accent);
+  font-style: normal;
+}
+
+/* Fade-in keyframes */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Forge Button */
+.button-forge {
+  margin-top: 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
+  border: none;
+  color: white;
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(249, 115, 22, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+
+.button-forge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.6);
+}
+
+.button-forge:active {
+  transform: scale(0.98);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  margin-top: 1rem;
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-light, #fff);
+}
