@@ -8,7 +8,6 @@ NPC Forge is a lightweight web app designed for Dungeon Masters to quickly gener
 ## Features
 
 - Generate fully fleshed-out NPCs in seconds  
-- Customizable attributes like race, role, and personality traits  
 - AI-powered generation for diverse and unique characters  
 - Simple and intuitive UI optimized for quick use during sessions  
 
@@ -17,7 +16,7 @@ NPC Forge is a lightweight web app designed for Dungeon Masters to quickly gener
 ## Tech Stack
 
 - React (frontend)  
-- Tailwind CSS (styling)  
+- SCSS (styling)  
 - OpenAI API (AI-powered NPC generation)  
 
 ---
