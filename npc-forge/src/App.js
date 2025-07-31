@@ -1,5 +1,6 @@
 import './App.scss';
 import { useState } from 'react';
+import NavBar from './NavBar.jsx';
 function App() {
   const [npc, setNpc] = useState(null);
   const [theme, setTheme] = useState('light');
@@ -82,6 +83,7 @@ Example output:
 
   return (
     <div className={`theme-${theme}`}>
+      <NavBar theme={theme} />
       <div className="container">
         <h1>NPC FORGE</h1>
         <p>Forge your unique NPCs in seconds</p>
